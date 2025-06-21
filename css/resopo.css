@@ -1,0 +1,516 @@
+/*Mobile*/
+@media (max-width: 768px) {
+    header {
+        top: 10px;
+    }
+
+    .burger {
+        display: block;
+        align-self: flex-end;
+        right: 20px;
+    }
+
+    .nav-links nav {
+        display: none;
+    }
+
+    .nav-links {
+        justify-content: center;
+
+        a {
+            font-size: 1.8rem;
+        }
+    }
+
+    .nav-container {
+        width: 100%;
+
+    }
+
+    .lang {
+        margin: 0;
+        align-self: center;
+        position: relative;
+
+}
+
+    .dropdown-menu {
+        display: none;
+    }
+
+
+    #search {
+        width: 100%;
+    }
+
+    #searchNav {
+        display: none;
+    }
+
+    .baner-cards {
+        height: 70vh;
+        overflow: hidden;
+    }
+
+    section {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+
+
+    .card-baner .txt h2 {
+        line-height: 20px;
+        font-size: 4rem;
+        line-height: 60px;
+
+    }
+
+    .card-baner .txt p {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .btn-saiba-mais {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+
+    .carousel-navigation {
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .carousel-navigation .arrow {
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+        font-size: 1.2rem;
+    }
+
+    .titulo {
+        font-size: 2rem;
+        margin-left: 1.2rem;
+    }
+
+    .destaques {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 500px;
+        padding: 0px;
+    }
+
+    .card-destaque {
+        height: 150px;
+        width: 80%;
+        margin-top: 2rem;
+    }
+
+    .card-destaque span {
+        font-size: 3rem;
+    }
+
+    h5 {
+        font-size: 1.7rem;
+        font-weight: 500;
+    }
+
+    .marquee .icon-empresa {
+        width: 120px;
+        height: 100px;
+        padding: 5px;
+    }
+
+
+
+    .contactos-section {
+        padding: 2rem 20px;
+
+        .logo-contact {
+            width: 100%;
+        }
+
+        .contact-info {
+            padding: 2rem;
+            border-radius: 3rem;
+        }
+
+        .contact-info h2,
+        h3,
+        .contact-form h2 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            margin: 20px 0;
+            font-size: 1.2rem;
+            font-weight: 200;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+        }
+
+        .social h3 {
+            margin-top: 30px;
+            font-size: 1.7rem;
+            line-height: 50px;
+        }
+
+        .social {
+            padding: 10px 0;
+        }
+
+        .social a {
+            margin: 0 0;
+        }
+
+        .contact-form {
+            width: 100%;
+            margin-top: 30px;
+            padding: 0rem;
+        }
+
+
+        .contact-form input,
+        .contact-form textarea {
+            margin-bottom: 15px;
+            padding: 15px;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            background: #eee;
+            font-size: 1rem;
+            outline: none;
+
+        }
+
+        .contact-form textarea {
+            min-height: 150px;
+            min-width: 100%;
+        }
+
+        .submit-btn {
+            padding: 15px;
+            border: none;
+            border-radius: 12px;
+            background: var(--gradient);
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+    }
+
+    .logo-grupoP {
+        position: absolute;
+        bottom: 3rem;
+        left: 1rem;
+        width: 55%;
+        height: 30%;
+    }
+
+    .destaques {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding-right: 20px;
+        height: 400px;
+    }
+
+    .ponto {
+        display: none;
+    }
+
+    .card-destaque {
+        width: calc(50% - 20px);
+        height: 150px;
+        margin: 0;
+    }
+
+    .number {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-destaque span,
+    .counter {
+        font-size: 2rem;
+    }
+
+    h5 {
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+
+
+    .sec-Card {
+        height: auto;
+        margin: 0 !important;
+        flex-direction: column;
+
+    }
+
+    .swiper-slide {
+        display: flex !important;
+        justify-content: center;
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+
+    .swiper-pagination {
+        position: relative !important;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+        height: 200px;
+        left: -20px !important;
+
+    }
+
+    .investidores-section {
+        height: auto;
+    }
+
+    .benefits-container,
+    .benefits-container2 {
+        width: 100%;
+        height: auto;
+
+    }
+
+    .benefits-container2 {
+        padding: 0 1rem;
+
+    }
+
+    .benefit-list,
+    .benefit-list2 {
+        width: 100%;
+    }
+
+    .benefit-tabs,
+    .benefit-tabs2 {
+        gap: 20px;
+        width: 100%;
+    }
+
+    .tab-button,
+    .tab-button2 {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .polis-section {
+        margin: 0;
+        padding: 0;
+        height: auto;
+
+        .titulo,
+        h3 {
+            padding-top: 1.7rem;
+            padding-left: 1rem;
+        }
+
+        p {
+            padding: 1rem;
+        }
+
+        .destaques {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            height: auto;
+            padding: 0 1rem;
+        }
+
+        .card-destaque {
+            width: calc(100% - 20px);
+            margin: 0;
+        }
+
+        .lotes {
+            flex-direction: column;
+            margin-top: 0rem;
+            padding: 0 0.3rem;
+
+            .tab-button {
+                margin-left: 0;
+
+                strong {
+                    font-size: 1.2rem;
+
+                }
+            }
+
+            .tab-button:nth-child(2) {
+                margin-left: 0px;
+            }
+
+            .tab-button:nth-child(3) {
+                margin-left: 0px;
+            }
+
+            .tab-button:nth-child(4) {
+                margin-left: 0px;
+            }
+
+            .tab-button:nth-child(5) {
+                margin-left: 0px;
+            }
+
+            .tab-button:nth-child(6) {
+                margin-left: 0px;
+            }
+
+            .tab-button:nth-child(7) {
+                margin-left: 0px;
+            }
+
+        }
+
+    }
+
+    .tab-button2.active {
+        transform: translateX(10px);
+    }
+
+    .grid-beneficios {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        padding: 0 1rem;
+    }
+}
+
+
+.local {
+    height: auto;
+
+    div {
+        & img {
+            object-fit: cover;
+        }
+
+        p {
+            padding: 5rem 0;
+        }
+
+    }
+}
+
+h3 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+}
+
+
+
+footer {
+
+    .bottom {
+        .footer-top {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+        }
+
+        .coluna-dupla {
+            column-gap: 10px;
+        }
+
+        .footer-column {
+            padding-left: 0;
+        }
+
+        .logo-footer {
+            margin-left: 0px;
+        }
+
+        .coluna-dupla li {
+            margin-bottom: 5px;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            font-weight: 200;
+        }
+
+        .termo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+            & li {
+                margin-bottom: 10px;
+                font-size: 1rem !important;
+                font-weight: bold !important;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 480px) {
+    .logo {
+        width: 140px;
+    }
+
+    .card-baner .txt h2 {
+        font-size: 2.4rem;
+        line-height: 50px;
+    }
+
+    .card-baner .txt p {
+        font-size: 0.9rem;
+    }
+
+    .text-top,
+    .text-bottom {
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
+
+    .local {
+        flex-direction: column;
+        height: auto;
+
+    }
+
+    footer {
+        & .bottom {
+            .footer-column {
+                padding-left: 0;
+            }
+
+            .logo-footer {
+                margin-left: 0px;
+
+            }
+        }
+    }
+}
