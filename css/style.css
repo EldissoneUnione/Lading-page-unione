@@ -489,17 +489,6 @@ header.active {
   }
 }
 
-.close-btn {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  color: var(--white);
-  z-index: 999;
-}
 
 .modal-content .social-menu {
   height: 85px;
@@ -747,13 +736,12 @@ strong {
   padding: 10px !important;
 }
 
-
 .carousel-navigation {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 40px 0;
+  margin: 30px 0;
   gap: 200px;
   width: 100%;
 }
@@ -781,8 +769,9 @@ strong {
   padding: 10px !important;
   width: 100%;
   text-align: center;
-  font-size: 16px;
+  font-size: 1.4rem;
   color: #666;
+
 }
 
 .btn {
@@ -815,7 +804,7 @@ strong {
 .close {
   color: #aaa;
   float: right;
-  font-size: 24px;
+  font-size: 40px;
   font-weight: bold;
   cursor: pointer;
 }
@@ -844,6 +833,12 @@ strong {
   border-radius: 20px;
   width: 650px;
   background: var(--bg-nav);
+  
+  
+  ul li {
+    text-align: left;
+  }
+
 }
 
 .benefit-tabs,
@@ -852,6 +847,7 @@ strong {
   flex-direction: column;
   gap: 30px;
   width: 500px;
+
 
 }
 
@@ -1032,7 +1028,6 @@ strong {
   button:hover {
     opacity: 1;
   }
-
 }
 
 .destaques {
@@ -1432,6 +1427,33 @@ h5 {
 
 .contactos-section .logo-contact {
   width: 45%;
+}
+
+#formFeedback {
+  position: absolute;
+  top: 0;
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  transition: background 0.3s, color 0.3s;
+}
+
+#formFeedback.sucesso {
+  background: #e6ffed;
+  color: #207544;
+  border: 1px solid #b7eacb;
+}
+
+#formFeedback.erro {
+  background: #ffeaea;
+  color: #a94442;
+  border: 1px solid #f5c6cb;
 }
 
 footer {

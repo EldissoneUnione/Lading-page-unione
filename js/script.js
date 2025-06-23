@@ -51,11 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     prevScrollpos = currentScrollPos;
-
     setActiveSectionOnScroll();
 
   });
-
 
   function setActiveSectionOnScroll() {
     const sections = document.querySelectorAll('section[id]');
@@ -78,13 +76,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-
   if (document.querySelector('section[id]')) {
     setActiveSectionOnScroll();
   }
 
   const counters = document.querySelectorAll(".counter");
-
   counters.forEach(counter => {
     const updateCount = () => {
       const target = +counter.getAttribute("data-target");
@@ -103,6 +99,59 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateCount();
   });
+
+  showBenefit(0);
+  showBenefit2(0);
+
+  const btnParticular = document.getElementById('btnParticular');
+  const btnEmpresa = document.getElementById('btnEmpresa');
+  const empresaField = document.getElementById('empresaField');
+  const form = document.getElementById('contactForm');
+  const feedback = document.getElementById('formFeedback');
+  if (btnParticular && btnEmpresa && empresaField) {
+    btnParticular.addEventListener('click', function() {
+      empresaField.style.display = 'none';
+      this.setAttribute('aria-pressed', 'true');
+      btnEmpresa.setAttribute('aria-pressed', 'false');
+    });
+    btnEmpresa.addEventListener('click', function() {
+      empresaField.style.display = 'block';
+      this.setAttribute('aria-pressed', 'true');
+      btnParticular.setAttribute('aria-pressed', 'false');
+    });
+  }
+  if (form && feedback) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      feedback.style.display = 'block';
+      feedback.textContent = 'Enviando...';
+      const submitBtn = form.querySelector('.submit-btn');
+      submitBtn.disabled = true;
+
+      const formData = new FormData(form);
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          feedback.textContent = 'Mensagem enviada com sucesso!';
+          form.reset();
+          document.getElementById('empresaInput').style.display = 'none';
+        } else {
+          feedback.textContent = 'Ocorreu um erro ao enviar. Tente novamente.';
+        }
+        submitBtn.disabled = false;
+      })
+      .catch(() => {
+        feedback.textContent = 'Ocorreu um erro ao enviar. Tente novamente.';
+        submitBtn.disabled = false;
+      });
+    });
+  }
 
 });
 
@@ -125,13 +174,10 @@ const modalContentT = {
     title: 'hotelaria',
     title2: 'Kalanaua',
     title3: 'Serviços',
-    text: `Consultas Médicas Gerais e Especialidades Clínicas
-          Exames Laboratoriais e Diagnóstico por Imagem
-          Psicologia, Psiquiatria e Terapias Integrativas
-          Nutrição, Saúde Preventiva e Medicina Funcional
-          Banco de Urgência com Atendimento Médico 24h
-          Bloco Operatório para Cirurgias Eletivas e Ambulatoriais
-          Medicina Ocupacional e Programas de Saúde Corporativa`,
+    text: ` Hotelaria Urbana e de Negócios
+            Turismo Ecológico e de Experiência
+            Eventos Corporativos e Sociais
+            Serviços de Restauração e Catering`,
     image: '../assets/logoBranco/Kalanaua.svg'
 
   },
@@ -139,27 +185,23 @@ const modalContentT = {
     title: 'Energia',
     title2: 'MBT Energia',
     title3: 'Serviços',
-    text: `Consultas Médicas Gerais e Especialidades Clínicas
-          Exames Laboratoriais e Diagnóstico por Imagem
-          Psicologia, Psiquiatria e Terapias Integrativas
-          Nutrição, Saúde Preventiva e Medicina Funcional
-          Banco de Urgência com Atendimento Médico 24h
-          Bloco Operatório para Cirurgias Eletivas e Ambulatoriais
-          Medicina Ocupacional e Programas de Saúde Corporativa`,
+    text: `Fornecimento e Montagem de Subestações e Linhas de Transmissão
+            Instalação e Manutenção de Ramais de Baixa e Média Tensão
+            Iluminação Pública e Privada
+            Montagem e Manutenção de Postos de Transformação
+            Soluções em Energias Renováveis
+            Projetos de Eficiência Energética e Sustentabilidade`,
     image: '../assets/logoBranco/MBT Energia.svg'
 
   },
   ensino: {
-    title: 'Ensino',
+    title: 'Educação Técnica',
     title2: 'Okukulanaua',
     title3: 'Serviços',
-    text: `Consultas Médicas Gerais e Especialidades Clínicas
-          Exames Laboratoriais e Diagnóstico por Imagem
-          Psicologia, Psiquiatria e Terapias Integrativas
-          Nutrição, Saúde Preventiva e Medicina Funcional
-          Banco de Urgência com Atendimento Médico 24h
-          Bloco Operatório para Cirurgias Eletivas e Ambulatoriais
-          Medicina Ocupacional e Programas de Saúde Corporativa`,
+    text: `Ensino Dual: formação teórica aliada à prática em ambiente profissional real
+            Laboratórios, oficinas e equipamentos atualizados
+            Parcerias com empresas dos setores industrial, agrícola e energético
+            Foco em empregabilidade, empreendedorismo e inovação técnica`,
     image: '../assets/logoBranco/Okukulanaua.svg'
 
   },
@@ -167,65 +209,54 @@ const modalContentT = {
     title: 'Agro-indústria',
     title2: 'Quavi - Qualidade de Vida',
     title3: 'Serviços',
-    text: `Consultas Médicas Gerais e Especialidades Clínicas
-          Exames Laboratoriais e Diagnóstico por Imagem
-          Psicologia, Psiquiatria e Terapias Integrativas
-          Nutrição, Saúde Preventiva e Medicina Funcional
-          Banco de Urgência com Atendimento Médico 24h
-          Bloco Operatório para Cirurgias Eletivas e Ambulatoriais
-          Medicina Ocupacional e Programas de Saúde Corporativa`,
+    text: `Produção, Abate e Transformação de Carne de Suíno
+            Produção e Comercialização de Plantas Ornamentais
+            Produção Agrícola e Comercialização de Legumes e Produtos Desidratados`,
     image: '../assets/logoBranco/Quavi.svg'
   },
   mecanica: {
     title: 'Mecânica Industrial',
     title2: 'Tecnology Africa',
     title3: 'Serviços',
-    text: `Consultas Médicas Gerais e Especialidades Clínicas
-          Exames Laboratoriais e Diagnóstico por Imagem
-          Psicologia, Psiquiatria e Terapias Integrativas
-          Nutrição, Saúde Preventiva e Medicina Funcional
-          Banco de Urgência com Atendimento Médico 24h
-          Bloco Operatório para Cirurgias Eletivas e Ambulatoriais
-          Medicina Ocupacional e Programas de Saúde Corporativa`,
+    text: `Soluções em Mecânica e Tecnologia Industrial
+            Manutenção de Máquinas Industriais e Agrícolas
+            Manutenção e Reparação de Grupos Geradores
+            Retificação e Usinagem de Peças (motores, cambotas, cilindros)
+            Montagem e Instalação de Equipamentos Mecânicos
+            Serviços de Manutenção Preventiva e Corretiva`,
     image: '../assets/logoBranco/Tecnology.svg'
   },
   consultoria: {
     title: 'Investimento e Consultoria',
-    title2: 'Unione',
+    title2: 'Unione Consultoria',
     title3: 'Serviços',
-    text: `Consultas Médicas Gerais e Especialidades Clínicas
-          Exames Laboratoriais e Diagnóstico por Imagem
-          Psicologia, Psiquiatria e Terapias Integrativas
-          Nutrição, Saúde Preventiva e Medicina Funcional
-          Banco de Urgência com Atendimento Médico 24h
-          Bloco Operatório para Cirurgias Eletivas e Ambulatoriais
-          Medicina Ocupacional e Programas de Saúde Corporativa`,
+    text: `Gestão de Investimentos Imobiliários
+            Intermediação e Estruturação de Negócios
+            Apoio à Internacionalização de Empresas
+            Consultoria e Gestão Empresarial
+            Incubação de Empresas (Ninho de Empresas)`,
     image: '../assets/logoBranco/Unione.svg'
   },
   metalurgia: {
     title: 'Metalurgia e Metalo-mecânica',
     title2: 'Metalangol',
     title3: 'Serviços',
-    text: `Consultas Médicas Gerais e Especialidades Clínicas
-          Exames Laboratoriais e Diagnóstico por Imagem
-          Psicologia, Psiquiatria e Terapias Integrativas
-          Nutrição, Saúde Preventiva e Medicina Funcional
-          Banco de Urgência com Atendimento Médico 24h
-          Bloco Operatório para Cirurgias Eletivas e Ambulatoriais
-          Medicina Ocupacional e Programas de Saúde Corporativa`,
+    text: `Fabricação de Peças e Estruturas Metálicas
+            Soldadura Técnica e Montagem
+            Construções Metálicas e Caldeiraria
+            Reparação e Manutenção Industrial`,
     image: '../assets/logoBranco/Metalangol.svg'
   },
   tecnologia: {
     title: 'Tecnologia e Inovação',
     title2: 'Fibra',
     title3: 'Serviços',
-    text: `Consultas Médicas Gerais e Especialidades Clínicas
-          Exames Laboratoriais e Diagnóstico por Imagem
-          Psicologia, Psiquiatria e Terapias Integrativas
-          Nutrição, Saúde Preventiva e Medicina Funcional
-          Banco de Urgência com Atendimento Médico 24h
-          Bloco Operatório para Cirurgias Eletivas e Ambulatoriais
-          Medicina Ocupacional e Programas de Saúde Corporativa`,
+    text: `Implementação de Redes de Fibra Óptica
+            Monitorização e Sistemas de Acesso
+            Projetos Técnicos e Consultoria Especializada
+            Redes Estruturadas e Cablagem Inteligente
+            Sistemas de Rádio Frequência
+            Infraestruturas de Suporte e Data Centers`,
     image: '../assets/logoBranco/Fibra.svg'
   },
 
@@ -233,40 +264,34 @@ const modalContentT = {
     title: 'Marcenaria e Carpintaria',
     title2: 'Mater',
     title3: 'Serviços',
-    text: `Consultas Médicas Gerais e Especialidades Clínicas
-          Exames Laboratoriais e Diagnóstico por Imagem
-          Psicologia, Psiquiatria e Terapias Integrativas
-          Nutrição, Saúde Preventiva e Medicina Funcional
-          Banco de Urgência com Atendimento Médico 24h
-          Bloco Operatório para Cirurgias Eletivas e Ambulatoriais
-          Medicina Ocupacional e Programas de Saúde Corporativa`,
-    image: '../assets/logoBranco/Mater.svg'
+    text: `Fabricação de Mobiliário por Medida
+            Carpintaria de Interiores e Estruturas em Madeira
+            Design e Montagem de Cozinhas, Closets e Escritórios
+            Produção de Portas, Janelas, Tetos Falsos e Revestimentos
+            Trabalhos de Acabamento Fino e Decoração em Madeira`,
+                image: '../assets/logoBranco/Mater.svg'
   },
 
   cc: {
     title: 'construção Civil',
     title2: 'Infraone',
     title3: 'Serviços',
-    text: `Consultas Médicas Gerais e Especialidades Clínicas
-          Exames Laboratoriais e Diagnóstico por Imagem
-          Psicologia, Psiquiatria e Terapias Integrativas
-          Nutrição, Saúde Preventiva e Medicina Funcional
-          Banco de Urgência com Atendimento Médico 24h
-          Bloco Operatório para Cirurgias Eletivas e Ambulatoriais
-          Medicina Ocupacional e Programas de Saúde Corporativa`,
+    text: `Construção de Infraestruturas Residenciais, Comerciais e Institucionais
+            Execução de Projetos Industriais, Logísticos e Agroindustriais
+            Obras Públicas de Urbanização, Redes Técnicas e Vias de Acesso
+            Reabilitação Estrutural e Arquitetónica de Edifícios
+            Planeamento, Coordenação Técnica e Gestão de Projetos de Obra`,
     image: '../assets/logoBranco/Infraone.svg'
   },
   cj: {
     title: 'Consultoria jurídica',
     title2: 'Integracons',
     title3: 'Serviços',
-    text: `Consultas Médicas Gerais e Especialidades Clínicas
-          Exames Laboratoriais e Diagnóstico por Imagem
-          Psicologia, Psiquiatria e Terapias Integrativas
-          Nutrição, Saúde Preventiva e Medicina Funcional
-          Banco de Urgência com Atendimento Médico 24h
-          Bloco Operatório para Cirurgias Eletivas e Ambulatoriais
-          Medicina Ocupacional e Programas de Saúde Corporativa`,
+    text: `Direito Empresarial, Societário e Contratual
+            Assessoria Jurídica em Investimentos e Parcerias
+            Regularização Fundiária e Direito Imobiliário
+            Direito Laboral e Contencioso Administrativo
+            Consultoria Legal Preventiva e Gestão de Risco`,
     image: '../assets/logoBranco/Integracons.svg'
   }
 };
@@ -301,7 +326,7 @@ const descriptions = [
     "Integração num projeto inovador, em crescimento contínuo.",
     "Potencial de retorno sólido em território com estrutura e visão de futuro."
   ],
-  ["Acesso direto aos principais corredores logísticos regionais (terrestres, marítimos e aéreos).", 
+  ["Acesso direto aos principais corredores logísticos regionais (terrestres, marítimos e aéreos).",
     "Conectividade multimodal: Porto do Namibe, Caminhos de Ferro de Moçâmedes e Aeroporto Internacional Agostinho Neto.",
     "Proximidade à fronteira com a Namíbia e aos principais centros urbanos de Angola."
   ],
@@ -343,8 +368,8 @@ const descriptions2 = [
   ],
   [
     "Centro de Exposição Permanente para divulgação e comercialização de produtos e serviços das empresas instaladas.",
-     "Centro de Distribuição Logístico"
-    ],
+    "Centro de Distribuição Logístico"
+  ],
   [
     "Espaços verdes e soluções de mobilidade interna.",
     "Qualidade de vida no ambiente de trabalho.",
@@ -352,7 +377,6 @@ const descriptions2 = [
 
   ]
 ];
-
 function showBenefit2(index) {
   const buttons2 = document.querySelectorAll('.tab-button2');
   buttons2.forEach(btn => btn.classList.remove('active'));
@@ -361,3 +385,4 @@ function showBenefit2(index) {
   const list2 = document.getElementById('benefit-description2');
   list2.innerHTML = '<ul>' + descriptions2[index].map(item => `<li>${item}</li>`).join('') + '</ul>';
 }
+

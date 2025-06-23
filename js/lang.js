@@ -79,7 +79,42 @@ const translations = {
     "mensagem": "Mensagem",
     "enviar": "Enviar",
     // Footer
-    "direitos-reservados": "Todos os direitos reservados"
+    "direitos-reservados": "Todos os direitos reservados",
+    // Benefícios dinâmicos do POLIS - Aba 1
+    "polis1_beneficio1": "Redes de saneamento.",
+    "polis1_beneficio2": "Energia Elétrica.",
+    "polis1_beneficio3": "Abastecimento de Água.",
+    "polis1_beneficio4": "Recolha de resíduos.",
+    "polis1_beneficio5": "Internet.",
+    "polis1_beneficio6": "Fibra Ótica.",
+    "polis1_beneficio7": "Vias Internas.",
+    "polis1_beneficio8": "Segurança Privada 24h.",
+    // Aba 2
+    "polis2_beneficio1": "Elaboração de projetos de arquitetura e engenharia personalizados.",
+    "polis2_beneficio2": "Segurança jurídica com lotes registados e transmissão automática de propriedade.",
+    "polis2_beneficio3": "Incubação de empresas nos primeiros anos de atividade.",
+    "polis2_beneficio4": "Formação de Técnicos Profissionais.",
+    "polis2_beneficio5": "Apoio na instalação e operação de unidades produtivas com agilidade e eficiência.",
+    // Aba 3
+    "polis3_beneficio1": "Centro de Exposição Permanente para divulgação e comercialização de produtos e serviços das empresas instaladas.",
+    "polis3_beneficio2": "Centro de Distribuição Logístico.",
+    // Aba 4
+    "polis4_beneficio1": "Espaços verdes e soluções de mobilidade interna.",
+    "polis4_beneficio2": "Qualidade de vida no ambiente de trabalho.",
+    "polis4_beneficio3": "Valorização contínua com um projeto inovador e em crescimento.",
+    // Títulos dos cards do swiper
+    "saude": "Saúde",
+    "hotelaria": "Hotelaria",
+    "energia": "Energia",
+    "ensino": "Ensino",
+    "agro-industria": "Agro-indústria",
+    "mecanica-industrial": "Mecânica Industrial",
+    "investimento-consultoria": "Investimento e Consultoria",
+    "metalurgia": "Metalurgia e Metalo-mecânica",
+    "tecnologia": "Telecomunicações",
+    "marcenaria-carpintaria": "Marcenaria e Carpintaria",
+    "construcao-civil": "construção Civil",
+    "consultoria-juridica": "Consultoria jurídica"
   },
   en: {
     // Menu and navigation
@@ -161,7 +196,42 @@ const translations = {
     "mensagem": "Message",
     "enviar": "Send",
     // Footer
-    "direitos-reservados": "All rights reserved"
+    "direitos-reservados": "All rights reserved",
+    // Benefícios dinâmicos do POLIS - Aba 1
+    "polis1_beneficio1": "Sanitation networks.",
+    "polis1_beneficio2": "Electric Power.",
+    "polis1_beneficio3": "Water Supply.",
+    "polis1_beneficio4": "Waste collection.",
+    "polis1_beneficio5": "Internet.",
+    "polis1_beneficio6": "Fiber Optics.",
+    "polis1_beneficio7": "Internal Roads.",
+    "polis1_beneficio8": "24h Private Security.",
+    // Aba 2
+    "polis2_beneficio1": "Development of personalized architecture and engineering projects.",
+    "polis2_beneficio2": "Legal security with registered lots and automatic property transfer.",
+    "polis2_beneficio3": "Business incubation in the first years of activity.",
+    "polis2_beneficio4": "Professional Technician Training.",
+    "polis2_beneficio5": "Support in the installation and operation of production units with agility and efficiency.",
+    // Aba 3
+    "polis3_beneficio1": "Permanent Exhibition Center for the promotion and marketing of products and services of installed companies.",
+    "polis3_beneficio2": "Logistics Distribution Center.",
+    // Aba 4
+    "polis4_beneficio1": "Green spaces and internal mobility solutions.",
+    "polis4_beneficio2": "Quality of life in the work environment.",
+    "polis4_beneficio3": "Continuous appreciation with an innovative and growing project.",
+    // Swiper card titles
+    "saude": "Health",
+    "hotelaria": "Hospitality",
+    "energia": "Energy",
+    "ensino": "Education",
+    "agro-industria": "Agro-industry",
+    "mecanica-industrial": "Industrial Mechanics",
+    "investimento-consultoria": "Investment and Consulting",
+    "metalurgia": "Metallurgy and Metalworking",
+    "tecnologia": "Telecommunications",
+    "marcenaria-carpintaria": "Carpentry and Joinery",
+    "construcao-civil": "Civil Construction",
+    "consultoria-juridica": "Legal Consulting"
   },
   fr: {
     // Menu et navigation
@@ -243,6 +313,41 @@ const translations = {
     "mensagem": "Message",
     "enviar": "Envoyer",
     // Footer
-    "direitos-reservados": "Tous droits réservés"
+    "direitos-reservados": "Tous droits réservés",
+    // Avantages dynamiques POLIS - Onglet 1
+    "polis1_beneficio1": "Réseaux d'assainissement.",
+    "polis1_beneficio2": "Énergie électrique.",
+    "polis1_beneficio3": "Approvisionnement en eau.",
+    "polis1_beneficio4": "Collecte des déchets.",
+    "polis1_beneficio5": "Internet.",
+    "polis1_beneficio6": "Fibre optique.",
+    "polis1_beneficio7": "Voiries internes.",
+    "polis1_beneficio8": "Sécurité privée 24h/24.",
+    // Onglet 2
+    "polis2_beneficio1": "Élaboration de projets d'architecture et d'ingénierie personnalisés.",
+    "polis2_beneficio2": "Sécurité juridique avec des lots enregistrés et transfert automatique de propriété.",
+    "polis2_beneficio3": "Incubation d'entreprises dans les premières années d'activité.",
+    "polis2_beneficio4": "Formation de techniciens professionnels.",
+    "polis2_beneficio5": "Soutien à l'installation et à l'exploitation d'unités de production avec agilité et efficacité.",
+    // Onglet 3
+    "polis3_beneficio1": "Centre d'exposition permanent pour la promotion et la commercialisation des produits et services des entreprises installées.",
+    "polis3_beneficio2": "Centre logistique de distribution.",
+    // Onglet 4
+    "polis4_beneficio1": "Espaces verts et solutions de mobilité interne.",
+    "polis4_beneficio2": "Qualité de vie dans l'environnement de travail.",
+    "polis4_beneficio3": "Valorisation continue avec un projet innovant et en croissance.",
+    // Titres des cartes swiper
+    "saude": "Santé",
+    "hotelaria": "Hôtellerie",
+    "energia": "Énergie",
+    "ensino": "Enseignement",
+    "agro-industria": "Agro-industrie",
+    "mecanica-industrial": "Mécanique Industrielle",
+    "investimento-consultoria": "Investissement et Conseil",
+    "metalurgia": "Métallurgie et Métallomécanique",
+    "tecnologia": "Télécommunications",
+    "marcenaria-carpintaria": "Menuiserie et Charpenterie",
+    "construcao-civil": "Construction Civile",
+    "consultoria-juridica": "Conseil juridique"
   }
 }; 
